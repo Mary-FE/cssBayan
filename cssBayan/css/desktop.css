@@ -10,4 +10,45 @@
     body {
         font-size: 1.8em;
     }
+
+    section {
+        max-width: 70rem;
+    }
+
+    .accordion-icon {
+        opacity: 0;
+    }
+
+    section:hover * {
+        cursor: pointer;
+    }
+
+    section:hover .accordion-icon {
+        opacity: 1;
+    }
+
+    .accordion-title span:not([class]) {
+        transition: .35s;
+    }
+
+    .accordion-title:hover {
+        color: lightcoral;
+    }
+
+    .accordion-item:hover .accordion-content img {
+        transform: scale(1);
+    }
+
+    .accordion-item:hover .accordion-content {
+        height: 100%;
+    }
+
+    .accordion-item:hover .accordion-icon {
+        transform: rotate(45deg);
+    }
+
+    input[name="accordion"]:checked + .accordion-item .accordion-content img:hover,
+    .accordion-item:hover .accordion-content img:hover {
+        transform: scale(1.1);
+    }
 }
