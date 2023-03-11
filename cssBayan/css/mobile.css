@@ -1,0 +1,70 @@
+/* Connection Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/* Common and mobile styles */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 25em;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+section {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0;
+    padding: 1.5em;
+
+    font: 500 .95em 'Open Sans', sans-serif;
+    background-color: #f6f6ec;
+}
+
+/* Base accordion logic */
+input[name="accordion"] {
+    display: none;
+}
+
+.accordion-content {
+    display: none;
+}
+
+input[name="accordion"]:checked + .accordion-item .accordion-content {
+    display: block;
+}
+
+/* Accordion-title */
+.accordion-title {
+    display: flex;
+    gap: .5em;
+    justify-content: space-between;
+    padding: 0.65em 0;
+    
+    font-weight: 600;
+    border-top: .04em solid #dbe1e5;
+}
+
+/* Accordion-icon */
+.accordion-icon {
+    font-size: 1.6em;
+    line-height: 0.85em;
+    transition: all .35s ease;
+}
+
+.accordion-icon:hover {
+    transform: rotate(45deg);
+}
+
+input[name="accordion"]:checked + .accordion-item .accordion-icon {
+    transform: rotate(45deg);
+}
