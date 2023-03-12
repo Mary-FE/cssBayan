@@ -1,0 +1,83 @@
+/* Connection Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/* Common and mobile styles */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 25em;
+    width: 100%;
+    margin: 1.5em auto;
+    transition: .75s;
+    transform: scale(0);
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: .5em;
+}
+
+section {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0;
+    padding: 1.5em;
+
+    font: 500 .95em 'Open Sans', sans-serif;
+    background-color: #f6f6ec;
+}
+
+/* Base accordion logic */
+input[name="accordion"] {
+    display: none;
+}
+
+.accordion-content {
+    height: 0;
+    overflow: hidden;
+}
+
+input[name="accordion"]:checked + .accordion-item .accordion-content {
+    height: 100%;
+}
+
+input[name="accordion"]:checked + .accordion-item .accordion-content img {
+    transform: scale(1);
+}
+
+/* Accordion-title, accordion-subtitle */
+.accordion-title {
+    display: flex;
+    gap: .5em;
+    justify-content: space-between;
+    padding: .65em 0;
+    
+    font-weight: 600;
+    border-top: .04em solid #dbe1e5;
+}
+
+.accordion-subtitle {
+    color: blue;
+    transition: .35s;
+}
+
+input[name="accordion"]:checked + .accordion-item .accordion-subtitle {
+    color: black;
+}
+
+/* Accordion-icon */
+.accordion-icon {
+    font-size: 1.6em;
+    line-height: .85em;
+    transition: all .35s ease;
+}
+
+input[name="accordion"]:checked + .accordion-item .accordion-icon {
+    transform: rotate(45deg);
+}
